@@ -1,0 +1,40 @@
+{
+  "brandName": "APEX CREATIVE",
+  "colors": {
+    "crimson": "#F31A3E",
+    "magenta": "#DC175B",
+    "deepPurple": "#7A2397",
+    "electricBlue": "#1D16EF",
+    "flameOrange": "#FB5521",
+    "tealAccent": "#03A7AE",
+    "inkBlack": "#0B0B0F",
+    "paperWhite": "#FCFCFD"
+  },
+  "signatureGradient": {
+    "stops": [
+      {
+        "color": "#F31A3E",
+        "position": "0%"
+      },
+      {
+        "color": "#DC175B",
+        "position": "33%"
+      },
+      {
+        "color": "#7A2397",
+        "position": "66%"
+      },
+      {
+        "color": "#1D16EF",
+        "position": "100%"
+      }
+    ],
+    "cssLinear": "linear-gradient(135deg, #F31A3E 0%, #DC175B 33%, #7A2397 66%, #1D16EF 100%)",
+    "cssHorizontal": "linear-gradient(90deg, #F31A3E 0%, #DC175B 33%, #7A2397 66%, #1D16EF 100%)"
+  },
+  "tagline": "IDEAS · VISUALS · IMPACT",
+  "typography": {
+    "primaryHeadings": "Montserrat, sans-serif",
+    "bodyAndUI": "Inter, sans-serif"
+  }
+}

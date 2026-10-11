@@ -1,0 +1,178 @@
+@import "tailwindcss";
+
+@theme {
+  --color-apex-crimson: #F31A3E;
+  --color-apex-magenta: #DC175B;
+  --color-apex-purple: #7A2397;
+  --color-apex-blue: #1D16EF;
+  --color-apex-orange: #FB5521;
+  --color-apex-teal: #03A7AE;
+  --color-apex-black: #0B0B0F;
+  --color-apex-white: #FCFCFD;
+
+  --font-display: Montserrat, sans-serif;
+  --font-sans: Inter, sans-serif;
+}
+
+:root {
+  --apex-crimson: #F31A3E;
+  --apex-magenta: #DC175B;
+  --apex-purple: #7A2397;
+  --apex-blue: #1D16EF;
+  --apex-orange: #FB5521;
+  --apex-teal: #03A7AE;
+  --apex-black: #0B0B0F;
+  --apex-white: #FCFCFD;
+  
+  --signature-gradient: linear-gradient(135deg, #F31A3E 0%, #DC175B 33%, #7A2397 66%, #1D16EF 100%);
+  --signature-gradient-h: linear-gradient(90deg, #F31A3E 0%, #DC175B 33%, #7A2397 66%, #1D16EF 100%);
+  --signature-gradient-subtle: linear-gradient(135deg, rgba(243, 26, 62, 0.08) 0%, rgba(220, 23, 91, 0.08) 33%, rgba(122, 35, 151, 0.08) 66%, rgba(29, 22, 239, 0.08) 100%);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--apex-white);
+  color: var(--apex-black);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Custom APEX Brand Utilities */
+.apex-gradient-text {
+  background: var(--signature-gradient-h);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.apex-gradient-bg {
+  background: var(--signature-gradient);
+}
+
+.apex-gradient-border {
+  position: relative;
+}
+
+.apex-gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: var(--signature-gradient-h);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.apex-glass-panel {
+  background: rgba(252, 252, 253, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(11, 11, 15, 0.08);
+}
+
+.apex-glass-dark {
+  background: rgba(11, 11, 15, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(252, 252, 253, 0.12);
+}
+
+/* Clear Space Rules for Logo Container */
+.apex-logo-clearspace {
+  padding: clamp(1rem, 2.5vw, 2rem);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Custom Animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 6s ease-in-out infinite;
+}
+
+@keyframes pulseSlow {
+  0%, 100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.03);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 5s ease-in-out infinite;
+}
+
+@keyframes floatSmooth {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes floatSmoothDelayed {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: floatSmooth 4s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: floatSmoothDelayed 4.5s ease-in-out infinite 0.75s;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.apex-animated-gradient {
+  background: linear-gradient(90deg, #F31A3E, #DC175B, #7A2397, #1D16EF, #F31A3E);
+  background-size: 300% 300%;
+  animation: gradientShift 8s linear infinite;
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FCFCFD;
+}
+::-webkit-scrollbar-thumb {
+  background: #7A2397;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F31A3E;
+}
