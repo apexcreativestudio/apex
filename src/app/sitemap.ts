@@ -2,8 +2,10 @@ import { MetadataRoute } from 'next';
 import { SERVICES_DATA } from '@/lib/services/data';
 import { INITIAL_POSTS } from '@/lib/sanity/posts';
 
+export const dynamic = 'force-static';
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://apexcreative.agency';
+  const baseUrl = 'https://apexcreative.co.in';
 
   const staticRoutes = [
     '',

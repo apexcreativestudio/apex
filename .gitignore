@@ -5,6 +5,7 @@ build/
 dist/
 dist-ssr/
 *.tsbuildinfo
+*.zip
 
 # Dependencies
 node_modules/

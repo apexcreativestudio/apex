@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 export const SITE_CONFIG = {
   name: 'APEX CREATIVE',
-  url: 'https://apexcreative.agency',
+  url: 'https://apexcreative.co.in',
   tagline: 'IDEAS · VISUALS · IMPACT',
   description: 'Official digital flagship of APEX CREATIVE. A new, ambitious creative design and digital marketing agency engineering bold visual identities, strategic digital experiences, and brand growth.',
   ogImage: '/brand/logo/apex-logo-primary.png'
